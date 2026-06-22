@@ -1,0 +1,1792 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🌞 Девичник Насти · 27 июня 2026</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Great+Vibes&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #2d1f1a;
+            overflow-x: hidden;
+            padding: 20px;
+            min-height: 100vh;
+            position: relative;
+            transition: background 1.2s ease, color 1.2s ease;
+            background: linear-gradient(145deg, #fcf3e7 0%, #f8e4d0 45%, #f5dcc2 100%);
+        }
+
+        .clouds {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+        .cloud {
+            position: absolute;
+            font-size: 4rem;
+            opacity: 0.2;
+            animation: cloudFloat 40s ease-in-out infinite alternate;
+            filter: drop-shadow(0 4px 20px rgba(255, 200, 150, 0.1));
+        }
+        .cloud:nth-child(1) {
+            top: 5%;
+            left: -5%;
+            animation-duration: 35s;
+            font-size: 5rem;
+        }
+        .cloud:nth-child(2) {
+            top: 20%;
+            right: -3%;
+            animation-duration: 45s;
+            animation-delay: -8s;
+            font-size: 3.5rem;
+        }
+        .cloud:nth-child(3) {
+            bottom: 15%;
+            left: 10%;
+            animation-duration: 50s;
+            animation-delay: -15s;
+            font-size: 4.5rem;
+        }
+        .cloud:nth-child(4) {
+            top: 55%;
+            right: 5%;
+            animation-duration: 38s;
+            animation-delay: -5s;
+            font-size: 3rem;
+        }
+        .cloud:nth-child(5) {
+            bottom: 30%;
+            left: 45%;
+            animation-duration: 42s;
+            animation-delay: -20s;
+            font-size: 3.8rem;
+        }
+        .cloud:nth-child(6) {
+            top: 10%;
+            left: 30%;
+            animation-duration: 48s;
+            animation-delay: -12s;
+            font-size: 2.8rem;
+            opacity: 0.15;
+        }
+        @keyframes cloudFloat {
+            0% {
+                transform: translateX(0px) scale(1);
+            }
+            100% {
+                transform: translateX(80px) scale(1.02);
+            }
+        }
+
+        body.night-mode .clouds {
+            opacity: 0;
+            transition: opacity 1.5s ease;
+        }
+
+        body.night-mode {
+            background: linear-gradient(145deg, #0b0b1a 0%, #141432 50%, #1a0f2e 100%) !important;
+            color: #e8d5c4;
+        }
+
+        body.night-mode .nav-garden {
+            background: rgba(20, 20, 50, 0.8);
+            border-color: rgba(180, 80, 200, 0.25);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+        }
+        body.night-mode .nav-garden a {
+            color: #c8a8c8;
+        }
+        body.night-mode .nav-garden a:hover {
+            color: #e8a0d4;
+        }
+        body.night-mode .nav-garden a::after {
+            background: #e8a0d4;
+        }
+        body.night-mode .hero-section h1 {
+            color: #f0d4e8;
+        }
+        body.night-mode .hero-subtitle {
+            color: #c8a8b8;
+        }
+        body.night-mode .hero-date {
+            background: rgba(26, 26, 46, 0.7);
+            color: #e8a0d4;
+            border-color: rgba(180, 80, 200, 0.3);
+        }
+        body.night-mode .countdown {
+            color: #c8a8b8;
+        }
+        body.night-mode .countdown span {
+            color: #e8a0d4;
+        }
+        body.night-mode .secret-code-section {
+            background: rgba(26, 26, 46, 0.8);
+            border-color: rgba(180, 80, 200, 0.2);
+        }
+        body.night-mode .secret-code-section h3 {
+            color: #e8a0d4;
+        }
+        body.night-mode .secret-code-section p {
+            color: #c8a8b8;
+        }
+        body.night-mode .secret-input input {
+            background: rgba(26, 26, 46, 0.7);
+            color: #e8d5c4;
+            border-color: rgba(180, 80, 200, 0.2);
+        }
+        body.night-mode .secret-input input:focus {
+            border-color: #e8a0d4;
+        }
+        body.night-mode .secret-input button {
+            background: linear-gradient(135deg, #6b2a5a, #4a1a3a);
+            color: #f0d4e8;
+        }
+        body.night-mode .checklist-section {
+            background: rgba(26, 26, 46, 0.8);
+            border-color: rgba(180, 80, 200, 0.15);
+        }
+        body.night-mode .checklist-section h2 {
+            color: #e8a0d4;
+        }
+        body.night-mode .checklist-section h2 span {
+            color: #c8a8b8;
+        }
+        body.night-mode .checklist-item {
+            background: rgba(26, 26, 46, 0.5);
+            border-color: rgba(180, 80, 200, 0.05);
+        }
+        body.night-mode .checklist-item:hover {
+            background: rgba(180, 80, 200, 0.05);
+        }
+        body.night-mode .item-text {
+            color: #e8d5c4;
+        }
+        body.night-mode .checkmark {
+            border-color: rgba(180, 80, 200, 0.3);
+        }
+        body.night-mode .checklist-item.checked .checkmark {
+            background: #e8a0d4;
+            color: #1a1a2e;
+        }
+        body.night-mode .flower-card {
+            background: rgba(26, 26, 46, 0.8);
+            border-color: rgba(180, 80, 200, 0.15);
+        }
+        body.night-mode .flower-card:hover {
+            border-color: rgba(180, 80, 200, 0.3);
+        }
+        body.night-mode .flower-card .card-title {
+            color: #d4b8c8;
+        }
+        body.night-mode .flower-card .card-secret {
+            color: #a88898;
+        }
+        body.night-mode .envelope-challenge {
+            background: rgba(26, 26, 46, 0.8);
+            border-color: rgba(180, 80, 200, 0.15);
+        }
+        body.night-mode .envelope-challenge .challenge-text {
+            background: rgba(26, 26, 46, 0.5);
+            color: #e8d5c4;
+            border-color: rgba(180, 80, 200, 0.05);
+        }
+        body.night-mode .btn-outline {
+            color: #d4b8c8;
+            border-color: rgba(180, 80, 200, 0.25);
+        }
+        body.night-mode .btn-outline:hover {
+            background: rgba(180, 80, 200, 0.1);
+            border-color: rgba(180, 80, 200, 0.4);
+            color: #f0d4e8;
+        }
+        body.night-mode .program-garden {
+            background: rgba(26, 26, 46, 0.8);
+            border-color: rgba(180, 80, 200, 0.15);
+        }
+        body.night-mode .program-garden h3 {
+            color: #e8a0d4;
+        }
+        body.night-mode .schedule-item-garden {
+            background: rgba(26, 26, 46, 0.4);
+            border-color: rgba(180, 80, 200, 0.05);
+        }
+        body.night-mode .schedule-item-garden:hover {
+            background: rgba(180, 80, 200, 0.05);
+            border-color: rgba(180, 80, 200, 0.15);
+        }
+        body.night-mode .schedule-item-garden .time-garden {
+            color: #e8a0d4;
+        }
+        body.night-mode .schedule-item-garden .desc-garden {
+            color: #c8a8b8;
+        }
+        body.night-mode .wishes-quote {
+            background: rgba(26, 26, 46, 0.8);
+            border-color: rgba(180, 80, 200, 0.15);
+        }
+        body.night-mode .wishes-quote p {
+            color: #e8d5c4;
+        }
+        body.night-mode .wishes-quote .signature-garden {
+            color: #e8a0d4;
+        }
+        body.night-mode .dresscode-garden h2 {
+            color: #e8a0d4;
+        }
+        body.night-mode .dresscode-card {
+            background: rgba(26, 26, 46, 0.8);
+            border-color: rgba(180, 80, 200, 0.15);
+        }
+        body.night-mode .dresscode-card h4 {
+            color: #e8a0d4;
+        }
+        body.night-mode .dresscode-card p {
+            color: #c8a8b8;
+        }
+        body.night-mode .calendar-garden {
+            background: rgba(26, 26, 46, 0.8);
+            border-color: rgba(180, 80, 200, 0.15);
+        }
+        body.night-mode .calendar-garden h2 {
+            color: #e8a0d4;
+        }
+        body.night-mode .cal-cell-garden {
+            background: rgba(26, 26, 46, 0.4);
+            color: #c8a8b8;
+        }
+        body.night-mode .cal-cell-garden.head {
+            color: #e8a0d4;
+        }
+        body.night-mode .cal-cell-garden.highlight {
+            background: linear-gradient(135deg, #6b2a5a, #4a1a3a);
+            color: #f0d4e8;
+            border-color: rgba(180, 80, 200, 0.3);
+        }
+        body.night-mode .cal-cell-garden.highlight::after {
+            content: '✦';
+        }
+        body.night-mode .footer-garden {
+            color: #a88898;
+            border-top-color: rgba(180, 80, 200, 0.1);
+        }
+
+        .star-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 1.8s ease;
+            background:
+                radial-gradient(2px 2px at 20px 30px, #eee, transparent),
+                radial-gradient(2px 2px at 40px 70px, #fff, transparent),
+                radial-gradient(2px 2px at 50px 160px, #ddd, transparent),
+                radial-gradient(2px 2px at 90px 40px, #fff, transparent),
+                radial-gradient(2px 2px at 130px 80px, #fff, transparent),
+                radial-gradient(2px 2px at 160px 30px, #ddd, transparent),
+                radial-gradient(1px 1px at 300px 200px, #fff, transparent),
+                radial-gradient(1px 1px at 400px 100px, #eee, transparent),
+                radial-gradient(1px 1px at 500px 300px, #fff, transparent),
+                radial-gradient(1px 1px at 600px 150px, #ddd, transparent),
+                radial-gradient(1px 1px at 700px 400px, #fff, transparent),
+                radial-gradient(1px 1px at 800px 250px, #eee, transparent);
+            background-size: 200px 200px;
+        }
+        body.night-mode .star-bg {
+            opacity: 0.4;
+        }
+
+        .glow-line {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 2s ease;
+            background: radial-gradient(ellipse at 50% 0%, rgba(180, 80, 200, 0.08) 0%, transparent 70%);
+        }
+        body.night-mode .glow-line {
+            opacity: 1;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .fade-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .nav-garden {
+            background: rgba(255, 248, 235, 0.75);
+            backdrop-filter: blur(12px);
+            border-radius: 60px;
+            padding: 14px 28px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 30px rgba(200, 150, 80, 0.15);
+            border: 1px solid rgba(255, 215, 140, 0.4);
+            transition: all 0.8s ease;
+        }
+        .nav-garden ul {
+            display: flex;
+            justify-content: center;
+            gap: 2.8rem;
+            flex-wrap: wrap;
+            list-style: none;
+        }
+        .nav-garden a {
+            text-decoration: none;
+            color: #5a3f32;
+            font-weight: 500;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            transition: all 0.3s;
+            position: relative;
+        }
+        .nav-garden a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #d46a3a;
+            transition: width 0.3s;
+        }
+        .nav-garden a:hover::after {
+            width: 100%;
+        }
+        .nav-garden a:hover {
+            color: #b85a2a;
+        }
+
+        .hero-section {
+            text-align: center;
+            padding: 40px 20px 60px;
+            position: relative;
+        }
+        .hero-icon {
+            font-size: 4.2rem;
+            display: inline-block;
+            animation: floatSun 4s ease-in-out infinite;
+            filter: drop-shadow(0 8px 25px rgba(255, 180, 50, 0.3));
+            transition: all 0.8s ease;
+        }
+        body.night-mode .hero-icon {
+            filter: drop-shadow(0 8px 30px rgba(180, 80, 200, 0.3));
+        }
+        @keyframes floatSun {
+            0%,
+            100% {
+                transform: translateY(0px) rotate(-3deg);
+            }
+            50% {
+                transform: translateY(-12px) rotate(3deg);
+            }
+        }
+        .hero-section h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(3.4rem, 10vw, 5.8rem);
+            margin: 10px 0 0;
+            line-height: 1.1;
+            color: #2d1f1a;
+            transition: color 0.8s ease;
+        }
+        .hero-section h1 .script-font {
+            font-family: 'Great Vibes', cursive;
+            font-size: 1.2em;
+            color: #b85a2a;
+            transition: color 0.8s ease;
+        }
+        body.night-mode .hero-section h1 .script-font {
+            color: #e8a0d4;
+        }
+        .hero-subtitle {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: #5a3f32;
+            font-style: italic;
+            letter-spacing: 2px;
+            margin-bottom: 25px;
+            transition: color 0.8s ease;
+        }
+        .hero-date {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #b85a2a;
+            background: rgba(255, 235, 200, 0.7);
+            padding: 10px 35px;
+            border-radius: 60px;
+            display: inline-block;
+            margin-bottom: 25px;
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(255, 180, 80, 0.3);
+            box-shadow: 0 0 40px rgba(255, 180, 50, 0.1);
+            transition: all 0.8s ease;
+        }
+        .hero-image {
+            max-width: 700px;
+            margin: 30px auto 0;
+            border-radius: 40px 10px 40px 10px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(180, 120, 60, 0.2);
+            border: 3px solid rgba(255, 215, 140, 0.5);
+            transition: all 0.8s ease;
+        }
+        body.night-mode .hero-image {
+            border-color: rgba(180, 80, 200, 0.2);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+        .hero-image img {
+            width: 100%;
+            display: block;
+            height: auto;
+        }
+        .countdown {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            color: #5a3f32;
+            margin-top: 8px;
+            transition: color 0.8s ease;
+        }
+        .countdown span {
+            font-weight: 700;
+            color: #b85a2a;
+            font-size: 1.5rem;
+            transition: color 0.8s ease;
+        }
+
+        .secret-code-section {
+            background: rgba(255, 245, 225, 0.8);
+            backdrop-filter: blur(4px);
+            border-radius: 40px 10px 40px 10px;
+            padding: 35px 30px;
+            margin: 40px 0;
+            border: 2px solid rgba(255, 200, 120, 0.4);
+            text-align: center;
+            box-shadow: 0 4px 25px rgba(200, 150, 80, 0.08);
+            transition: all 0.8s ease;
+        }
+        .secret-code-section h3 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.4rem;
+            color: #b85a2a;
+            margin-bottom: 8px;
+            transition: color 0.8s ease;
+        }
+        .secret-code-section p {
+            color: #5a3f32;
+            transition: color 0.8s ease;
+        }
+        .secret-input {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 18px;
+        }
+        .secret-input input {
+            padding: 12px 25px;
+            border-radius: 60px;
+            border: 1px solid rgba(200, 150, 80, 0.3);
+            background: rgba(255, 248, 235, 0.7);
+            color: #2d1f1a;
+            font-size: 1rem;
+            outline: none;
+            min-width: 200px;
+            text-align: center;
+            font-family: 'Inter', sans-serif;
+            transition: all 0.3s;
+        }
+        .secret-input input:focus {
+            border-color: #d46a3a;
+            box-shadow: 0 0 30px rgba(255, 180, 80, 0.15);
+        }
+        .secret-input button {
+            padding: 12px 35px;
+            border-radius: 60px;
+            border: none;
+            background: linear-gradient(135deg, #d46a3a, #b85a2a);
+            color: #fcf3e7;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 1px solid rgba(255, 200, 120, 0.3);
+        }
+        .secret-input button:hover {
+            transform: scale(1.04);
+            box-shadow: 0 8px 35px rgba(200, 120, 50, 0.25);
+        }
+        .music-status {
+            margin-top: 14px;
+            padding: 8px 22px;
+            border-radius: 60px;
+            display: inline-block;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+        .music-status.off {
+            background: rgba(200, 80, 80, 0.10);
+            color: #a05540;
+            border: 1px solid rgba(200, 80, 80, 0.15);
+        }
+        .music-status.on {
+            background: rgba(80, 200, 120, 0.15);
+            color: #2a7a4a;
+            border: 1px solid rgba(80, 200, 120, 0.25);
+            animation: pulseGreen 1.8s ease-in-out infinite;
+        }
+        @keyframes pulseGreen {
+            0%,
+            100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.5;
+            }
+        }
+
+        .surprise-section {
+            text-align: center;
+            margin: 40px 0;
+        }
+        .surprise-btn {
+            background: linear-gradient(135deg, #ff7b3a, #e05a1a);
+            color: #ffffff;
+            border: 4px solid rgba(255, 180, 80, 0.6);
+            padding: 26px 64px;
+            border-radius: 70px;
+            font-family: 'Inter', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 6px 35px rgba(255, 120, 40, 0.4);
+            text-shadow: 2px 3px 6px rgba(0, 0, 0, 0.2);
+            letter-spacing: 2px;
+            line-height: 1.2;
+            min-width: 300px;
+        }
+        .surprise-btn:hover {
+            transform: scale(1.05) rotate(-2deg);
+            box-shadow: 0 10px 55px rgba(255, 120, 40, 0.5);
+            border-color: rgba(255, 200, 100, 0.9);
+        }
+        .surprise-btn:active {
+            transform: scale(0.95) rotate(2deg);
+        }
+        body.night-mode .surprise-btn {
+            background: linear-gradient(135deg, #ff6b6b, #c0392b);
+            border-color: rgba(255, 100, 100, 0.5);
+            box-shadow: 0 4px 30px rgba(255, 0, 0, 0.3);
+        }
+        body.night-mode .surprise-btn:hover {
+            box-shadow: 0 8px 50px rgba(255, 0, 0, 0.4);
+            border-color: rgba(255, 100, 100, 0.8);
+        }
+        .surprise-section .hint {
+            color: #5a3f32;
+            margin-top: 12px;
+            font-size: 0.95rem;
+            font-weight: 400;
+            opacity: 0.7;
+            transition: color 0.8s ease;
+        }
+        body.night-mode .surprise-section .hint {
+            color: #c8a8b8;
+        }
+
+        .checklist-section {
+            background: rgba(255, 245, 225, 0.7);
+            backdrop-filter: blur(4px);
+            border-radius: 40px 10px 40px 10px;
+            padding: 35px 30px;
+            margin: 40px 0;
+            border: 1px solid rgba(255, 215, 140, 0.3);
+            box-shadow: 0 4px 25px rgba(200, 150, 80, 0.06);
+            transition: all 0.8s ease;
+        }
+        .checklist-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.4rem;
+            color: #b85a2a;
+            text-align: center;
+            transition: color 0.8s ease;
+        }
+        .checklist-section h2 span {
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            color: #5a3f32;
+            display: block;
+            font-weight: 400;
+            margin-top: 4px;
+            transition: color 0.8s ease;
+        }
+        .checklist-items {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 14px;
+            max-width: 500px;
+            margin: 22px auto;
+        }
+        .checklist-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 12px 22px;
+            width: 100%;
+            background: rgba(255, 248, 235, 0.5);
+            border-radius: 60px;
+            border: 1px solid rgba(200, 150, 80, 0.1);
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+        .checklist-item:hover {
+            background: rgba(255, 235, 200, 0.4);
+        }
+        .checklist-item.checked {
+            opacity: 0.6;
+            border-color: rgba(200, 150, 80, 0.2);
+        }
+        .checklist-item.checked .checkmark {
+            background: #d46a3a;
+            color: #fcf3e7;
+        }
+        .checklist-item.checked .item-text {
+            text-decoration: line-through;
+        }
+        .checkmark {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border: 2px solid rgba(200, 150, 80, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            transition: all 0.3s;
+            flex-shrink: 0;
+            color: transparent;
+        }
+        .item-text {
+            font-size: 1rem;
+            color: #2d1f1a;
+            transition: all 0.3s;
+        }
+        .item-emoji {
+            font-size: 1.3rem;
+            margin-right: 6px;
+        }
+
+        .flower-cards {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            margin: 50px 0;
+        }
+        .flower-card {
+            background: rgba(255, 248, 235, 0.8);
+            backdrop-filter: blur(4px);
+            border-radius: 70px 20px 70px 20px;
+            padding: 25px 18px 20px;
+            width: 160px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.4s;
+            border: 1px solid rgba(255, 215, 140, 0.3);
+            box-shadow: 0 4px 20px rgba(200, 150, 80, 0.06);
+        }
+        .flower-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(200, 150, 80, 0.12);
+            border-color: rgba(255, 180, 80, 0.4);
+        }
+        .flower-card .emoji-big {
+            font-size: 3rem;
+            display: block;
+            margin-bottom: 8px;
+        }
+        .flower-card .card-title {
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: #5a3f32;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+            transition: color 0.8s ease;
+        }
+        .flower-card .card-secret {
+            font-size: 0.8rem;
+            color: #8a6b5a;
+            min-height: 55px;
+            font-weight: 400;
+            line-height: 1.4;
+            transition: color 0.8s ease;
+        }
+
+        .envelope-memory {
+            background: rgba(255, 245, 225, 0.7);
+            backdrop-filter: blur(4px);
+            border-radius: 40px 10px 40px 10px;
+            padding: 40px 30px;
+            margin: 40px 0;
+            border: 1px solid rgba(255, 215, 140, 0.3);
+            text-align: center;
+            box-shadow: 0 4px 25px rgba(200, 150, 80, 0.06);
+            transition: all 0.8s ease;
+        }
+        .envelope-memory h3 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.4rem;
+            color: #b85a2a;
+            margin-bottom: 10px;
+            transition: color 0.8s ease;
+        }
+        .memory-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 20px;
+        }
+        .memory-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            width: 140px;
+        }
+        .memory-item:hover {
+            transform: translateY(-8px) scale(1.02);
+        }
+        .memory-item .envelope-icon {
+            font-size: 4.8rem;
+            transition: all 0.4s;
+            filter: drop-shadow(0 6px 18px rgba(200, 150, 80, 0.2));
+        }
+        .memory-item:hover .envelope-icon {
+            transform: rotate(-6deg) scale(1.05);
+            filter: drop-shadow(0 10px 30px rgba(200, 150, 80, 0.3));
+        }
+        .memory-item .memory-label {
+            font-weight: 500;
+            font-size: 0.9rem;
+            color: #5a3f32;
+            margin-top: 6px;
+            letter-spacing: 0.3px;
+            transition: color 0.8s ease;
+        }
+        body.night-mode .memory-item .memory-label {
+            color: #c8a8b8;
+        }
+        body.night-mode .envelope-memory {
+            background: rgba(26, 26, 46, 0.8);
+            border-color: rgba(180, 80, 200, 0.15);
+        }
+        body.night-mode .envelope-memory h3 {
+            color: #e8a0d4;
+        }
+        body.night-mode .memory-item .envelope-icon {
+            filter: drop-shadow(0 6px 18px rgba(180, 80, 200, 0.2));
+        }
+
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(8px);
+            z-index: 10000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            animation: fadeInModal 0.4s ease;
+        }
+        .modal-overlay.active {
+            display: flex;
+        }
+        @keyframes fadeInModal {
+            0% {
+                opacity: 0;
+                transform: scale(0.92);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        .modal-content {
+            max-width: 700px;
+            width: 100%;
+            background: #fcf3e7;
+            border-radius: 40px 10px 40px 10px;
+            overflow: hidden;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+            position: relative;
+            border: 2px solid rgba(255, 215, 140, 0.3);
+            max-height: 90vh;
+            display: flex;
+            flex-direction: column;
+        }
+        body.night-mode .modal-content {
+            background: #1a1a2e;
+            border-color: rgba(180, 80, 200, 0.2);
+        }
+        .modal-content .image-wrapper {
+            width: 100%;
+            flex-shrink: 0;
+            background: #1a1a2e;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 200px;
+        }
+        .modal-content .image-wrapper img {
+            width: 100%;
+            height: auto;
+            max-height: 60vh;
+            object-fit: contain;
+            display: block;
+            background: #0b0b1a;
+        }
+        .modal-close {
+            position: absolute;
+            top: 16px;
+            right: 20px;
+            font-size: 2.2rem;
+            color: #fff;
+            background: rgba(0, 0, 0, 0.4);
+            border: none;
+            border-radius: 50%;
+            width: 48px;
+            height: 48px;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(4px);
+            font-weight: 300;
+            line-height: 1;
+            z-index: 10;
+        }
+        .modal-close:hover {
+            background: rgba(0, 0, 0, 0.7);
+            transform: rotate(90deg);
+        }
+        body.night-mode .modal-close {
+            background: rgba(180, 80, 200, 0.3);
+            color: #f0d4e8;
+        }
+        body.night-mode .modal-close:hover {
+            background: rgba(180, 80, 200, 0.5);
+        }
+        .modal-caption {
+            padding: 18px 24px 24px;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            text-align: center;
+            color: #5a3f32;
+            font-size: 1.1rem;
+            border-top: 1px solid rgba(200, 150, 80, 0.15);
+            flex-shrink: 0;
+            background: inherit;
+        }
+        body.night-mode .modal-caption {
+            color: #c8a8b8;
+            border-top-color: rgba(180, 80, 200, 0.1);
+        }
+
+        .program-garden {
+            background: rgba(255, 248, 235, 0.7);
+            backdrop-filter: blur(4px);
+            padding: 50px 30px;
+            border-radius: 80px 20px 80px 20px;
+            margin: 40px 0;
+            border: 1px solid rgba(255, 215, 140, 0.3);
+            box-shadow: 0 4px 25px rgba(200, 150, 80, 0.06);
+            transition: all 0.8s ease;
+        }
+        .program-garden h3 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.8rem;
+            text-align: center;
+            color: #b85a2a;
+            transition: color 0.8s ease;
+        }
+        .schedule-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 30px;
+        }
+        .schedule-item-garden {
+            background: rgba(255, 245, 225, 0.5);
+            padding: 20px 30px;
+            border-radius: 60px;
+            text-align: center;
+            min-width: 160px;
+            border: 1px solid rgba(255, 215, 140, 0.2);
+            transition: all 0.3s;
+        }
+        .schedule-item-garden:hover {
+            background: rgba(255, 235, 200, 0.4);
+            transform: scale(1.02);
+            border-color: rgba(255, 180, 80, 0.3);
+        }
+        .schedule-item-garden .time-garden {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: #b85a2a;
+            transition: color 0.8s ease;
+        }
+        .schedule-item-garden .desc-garden {
+            font-size: 0.95rem;
+            opacity: 0.9;
+            margin-top: 4px;
+            font-weight: 400;
+            color: #2d1f1a;
+            transition: color 0.8s ease;
+        }
+        .schedule-item-garden .icon-garden {
+            font-size: 2rem;
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .wishes-quote {
+            max-width: 750px;
+            margin: 40px auto;
+            padding: 35px 30px;
+            background: rgba(255, 248, 235, 0.7);
+            backdrop-filter: blur(4px);
+            border-radius: 60px 10px 60px 10px;
+            text-align: center;
+            border-left: 5px solid #d46a3a;
+            border: 1px solid rgba(255, 215, 140, 0.3);
+            box-shadow: 0 4px 25px rgba(200, 150, 80, 0.06);
+            transition: all 0.8s ease;
+        }
+        .wishes-quote p {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-style: italic;
+            color: #2d1f1a;
+            line-height: 1.6;
+            transition: color 0.8s ease;
+        }
+        .wishes-quote .signature-garden {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2rem;
+            color: #b85a2a;
+            margin-top: 8px;
+            transition: color 0.8s ease;
+        }
+
+        .dresscode-garden {
+            text-align: center;
+            margin: 40px 0;
+        }
+        .dresscode-garden h2 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 3rem;
+            color: #b85a2a;
+            transition: color 0.8s ease;
+        }
+        .dresscode-cards {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin: 25px 0;
+        }
+        .dresscode-card {
+            background: rgba(255, 248, 235, 0.7);
+            backdrop-filter: blur(4px);
+            padding: 28px 30px;
+            border-radius: 50px 10px 50px 10px;
+            width: 200px;
+            border: 1px solid rgba(255, 215, 140, 0.25);
+            transition: all 0.3s;
+            box-shadow: 0 4px 20px rgba(200, 150, 80, 0.04);
+        }
+        .dresscode-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 35px rgba(200, 150, 80, 0.08);
+            border-color: rgba(255, 180, 80, 0.3);
+        }
+        .dresscode-card h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: #b85a2a;
+            transition: color 0.8s ease;
+        }
+        .dresscode-card p {
+            font-size: 0.95rem;
+            color: #5a3f32;
+            font-weight: 400;
+            margin-top: 6px;
+            transition: color 0.8s ease;
+        }
+
+        .calendar-garden {
+            background: rgba(255, 248, 235, 0.7);
+            backdrop-filter: blur(4px);
+            border-radius: 40px 10px 40px 10px;
+            padding: 35px 30px;
+            margin: 40px 0;
+            text-align: center;
+            border: 1px solid rgba(255, 215, 140, 0.3);
+            box-shadow: 0 4px 25px rgba(200, 150, 80, 0.06);
+            transition: all 0.8s ease;
+        }
+        .calendar-garden h2 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.6rem;
+            color: #b85a2a;
+            transition: color 0.8s ease;
+        }
+        .cal-grid-garden {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            max-width: 500px;
+            margin: 20px auto;
+            gap: 6px;
+        }
+        .cal-cell-garden {
+            padding: 10px 0;
+            font-size: 0.9rem;
+            border-radius: 30px;
+            background: rgba(255, 248, 235, 0.4);
+            color: #5a3f32;
+            font-weight: 400;
+            transition: all 0.3s;
+        }
+        .cal-cell-garden.highlight {
+            background: linear-gradient(135deg, #d46a3a, #b85a2a);
+            color: #fcf3e7;
+            font-weight: 700;
+            position: relative;
+            border: 2px solid rgba(255, 200, 120, 0.5);
+            box-shadow: 0 0 30px rgba(200, 120, 50, 0.15);
+            transform: scale(1.04);
+        }
+        .cal-cell-garden.highlight::after {
+            content: '☀️';
+            position: absolute;
+            top: -6px;
+            right: -4px;
+            font-size: 0.7rem;
+            transition: all 0.8s ease;
+        }
+        body.night-mode .cal-cell-garden.highlight::after {
+            content: '✦';
+        }
+        .cal-cell-garden.head {
+            font-weight: 600;
+            color: #b85a2a;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            background: transparent;
+            transition: color 0.8s ease;
+        }
+        .cal-cell-garden.empty {
+            background: transparent;
+        }
+
+        .footer-garden {
+            text-align: center;
+            padding: 35px 20px;
+            border-top: 1px solid rgba(200, 150, 80, 0.15);
+            font-family: 'Playfair Display', serif;
+            font-size: 1rem;
+            color: #8a6b5a;
+            transition: all 0.8s ease;
+        }
+        .footer-garden .heart-flower {
+            display: inline-block;
+            animation: floatSun 2.8s ease-in-out infinite;
+        }
+
+        .firework-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+            overflow: hidden;
+        }
+        .firework-particle {
+            position: absolute;
+            border-radius: 50%;
+            animation: fireworkBurst linear forwards;
+            opacity: 0.9;
+            width: 10px;
+            height: 10px;
+        }
+        @keyframes fireworkBurst {
+            0% {
+                transform: translate(0, 0) scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: translate(var(--tx), var(--ty)) scale(0);
+                opacity: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-garden ul {
+                gap: 1.5rem;
+            }
+            .nav-garden a {
+                font-size: 0.7rem;
+            }
+            .flower-card {
+                width: 140px;
+                padding: 18px 12px;
+            }
+            .schedule-item-garden {
+                min-width: 120px;
+                padding: 14px 16px;
+            }
+            .schedule-item-garden .time-garden {
+                font-size: 1.5rem;
+            }
+            .dresscode-card {
+                width: 170px;
+                padding: 18px 20px;
+            }
+            .hero-date {
+                font-size: 1.3rem;
+                padding: 8px 20px;
+            }
+            .surprise-btn {
+                font-size: 1.6rem;
+                padding: 18px 40px;
+                min-width: 200px;
+            }
+            .cloud {
+                font-size: 2.5rem !important;
+            }
+            .memory-item {
+                width: 110px;
+            }
+            .memory-item .envelope-icon {
+                font-size: 3.8rem;
+            }
+            .modal-content .image-wrapper img {
+                max-height: 40vh;
+            }
+        }
+        @media (max-width: 480px) {
+            .nav-garden {
+                padding: 12px 14px;
+                border-radius: 40px;
+            }
+            .nav-garden ul {
+                gap: 0.8rem;
+            }
+            .flower-card {
+                width: 120px;
+            }
+            .flower-card .emoji-big {
+                font-size: 2.2rem;
+            }
+            .hero-section {
+                padding: 30px 10px 40px;
+            }
+            .schedule-item-garden {
+                min-width: 90px;
+                padding: 10px 10px;
+            }
+            .schedule-item-garden .time-garden {
+                font-size: 1.2rem;
+            }
+            .schedule-item-garden .desc-garden {
+                font-size: 0.75rem;
+            }
+            .secret-input input {
+                min-width: 140px;
+                font-size: 0.9rem;
+            }
+            .surprise-btn {
+                font-size: 1.2rem;
+                padding: 14px 24px;
+                min-width: 160px;
+            }
+            .cloud {
+                font-size: 2rem !important;
+            }
+            .memory-item {
+                width: 90px;
+            }
+            .memory-item .envelope-icon {
+                font-size: 3rem;
+            }
+            .memory-item .memory-label {
+                font-size: 0.75rem;
+            }
+            .modal-content {
+                border-radius: 24px 6px 24px 6px;
+            }
+            .modal-content .image-wrapper img {
+                max-height: 35vh;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="clouds">
+        <div class="cloud">☁️</div>
+        <div class="cloud">☁️</div>
+        <div class="cloud">☁️</div>
+        <div class="cloud">☁️</div>
+        <div class="cloud">☁️</div>
+        <div class="cloud">☁️</div>
+    </div>
+
+    <div class="star-bg"></div>
+    <div class="glow-line"></div>
+
+    <div class="firework-container" id="fireworkContainer"></div>
+
+    <div class="container">
+
+        <nav class="nav-garden fade-up">
+            <ul>
+                <li><a href="#invite">☀️ Приглашение</a></li>
+                <li><a href="#schedule">✨ Программа</a></li>
+                <li><a href="#wishes">💛 Пожелания</a></li>
+                <li><a href="#dresscode">👗 Дресс-код</a></li>
+                <li><a href="#memories">📮 Воспоминания</a></li>
+            </ul>
+        </nav>
+
+        <section class="hero-section fade-up" id="invite">
+            <div class="hero-icon" id="heroIcon">🌞</div>
+            <h1>
+                <span class="script-font">Девичник</span><br>
+                <span style="font-family:'Playfair Display',serif;font-weight:600;">Насти</span>
+            </h1>
+            <div class="hero-subtitle">— Приглашаем разделить с нами полный событий вечер!—</div>
+            <div class="hero-date">💥 27 ИЮНЯ 2026 💥</div>
+            <div class="hero-image">
+                <img src="your-main-photo.jpg" alt="Приглашение" onerror="this.src='https://placehold.co/900x650/f5e6d3/b85a2a?text=Nastya+Girls+Night'">
+            </div>
+        </section>
+
+        <div class="secret-code-section fade-up">
+            <h3>🎵 Секретный код</h3>
+            <p style="font-style: italic;">Введи пароль, чтобы включить музыку:</p>
+            <p style="color:#b85a2a; font-size:1.6rem; font-family:'Great Vibes',cursive; margin:4px 0; transition:color 0.8s ease;" id="secretHint">ЛУЧШАЯ</p>
+            <div class="secret-input">
+                <input type="text" id="secretInput" placeholder="Введи пароль..." />
+                <button onclick="checkSecret()">🔓 Включить музыку</button>
+            </div>
+            <div id="musicStatus" class="music-status off">🔇 Музыка выключена</div>
+        </div>
+
+        <div class="surprise-section fade-up">
+            <button class="surprise-btn" id="surpriseBtn" onclick="showSurprise()">
+                💥 Нажми, если готова!
+            </button>
+            <p class="hint">Готова к самому безумному вечеру в своей жизни?</p>
+        </div>
+
+        <div class="checklist-section fade-up">
+            <h2>
+                📋 ЧТО НЕЛЬЗЯ ЗАБЫТЬ
+            </h2>
+            <div class="checklist-items">
+                <div class="checklist-item" onclick="toggleCheck(this)">
+                    <div class="checkmark">✓</div>
+                    <div class="item-text"><span class="item-emoji">👠</span> Белый праздничный наряд</div>
+                </div>
+                <div class="checklist-item" onclick="toggleCheck(this)">
+                    <div class="checkmark">✓</div>
+                    <div class="item-text"><span class="item-emoji">👟 </span> Сменная одежда (подробнее вышлем в телеграмм)</div>
+                </div>
+                <div class="checklist-item" onclick="toggleCheck(this)">
+                    <div class="checkmark">✓</div>
+                    <div class="item-text"><span class="item-emoji">📱</span> Зарядка для телефона (чтобы все сфоткать, день будет долгим)</div>
+                </div>
+                <div class="checklist-item" onclick="toggleCheck(this)">
+                    <div class="checkmark">✓</div>
+                    <div class="item-text"><span class="item-emoji">😊</span> Хорошее настроение (оно обязательное)</div>
+                </div>
+                <div class="checklist-item" onclick="toggleCheck(this)">
+                    <div class="checkmark">✓</div>
+                    <div class="item-text"><span class="item-emoji">💄</span> Блеск для губ (для идеального фото)</div>
+                </div>
+            </div>
+            <p style="text-align:center; color:#8a6b5a; font-size:0.9rem; margin-top:6px; transition:color 0.8s ease;" id="checklistHint">Нажми на пункт, чтобы отметить ✔</p>
+        </div>
+
+        <div class="flower-cards fade-up">
+            <div class="flower-card" data-secret="Сегодня ты — главная звезда! Сияй ярче всех!">
+                <span class="emoji-big">🌟</span>
+                <div class="card-secret">Нажми, чтобы узнать секрет</div>
+            </div>
+            <div class="flower-card" data-secret="Танцуй так, как будто никто не смотрит!">
+                <span class="emoji-big">💃</span>
+                <div class="card-secret">Нажми, чтобы узнать секрет</div>
+            </div>
+            <div class="flower-card" data-secret="Пой так, будто никто не слышит!">
+                <span class="emoji-big">🎤</span>
+                <div class="card-secret">Нажми, чтобы узнать секрет</div>
+            </div>
+            <div class="flower-card" data-secret="Ты королева вечера!">
+                <span class="emoji-big">👑</span>
+                <div class="card-secret">Нажми, чтобы узнать секрет</div>
+            </div>
+        </div>
+
+        <div class="envelope-memory fade-up" id="memories">
+            <h3>📮 Конверты воспоминаний</h3>
+            <div class="memory-grid">
+                <div class="memory-item" onclick="openMemory(1)">
+                    <span class="envelope-icon">✉️</span>
+                    <span class="memory-label">🤫</span>
+                </div>
+                <div class="memory-item" onclick="openMemory(2)">
+                    <span class="envelope-icon">✉️</span>
+                    <span class="memory-label">🤫</span>
+                </div>
+                <div class="memory-item" onclick="openMemory(3)">
+                    <span class="envelope-icon">✉️</span>
+                    <span class="memory-label">🤫</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-overlay" id="memoryModal" onclick="closeMemory()">
+            <div class="modal-content" onclick="event.stopPropagation();">
+                <button class="modal-close" onclick="closeMemory()">✕</button>
+                <div class="image-wrapper">
+                    <img id="memoryImage" src="" alt="Фото воспоминания" onerror="this.src='https://placehold.co/700x500/f5e6d3/b85a2a?text=Фото+не+загружено'">
+                </div>
+                <div class="modal-caption" id="memoryCaption">✨ Воспоминание</div>
+            </div>
+        </div>
+
+        <section class="program-garden fade-up" id="schedule">
+            <h3>✨ Программа вечера ✨</h3>
+            <div class="schedule-grid">
+                <div class="schedule-item-garden">
+                    <span class="icon-garden">☀️</span>
+                    <div class="time-garden">17:30</div>
+                </div>
+                <div class="schedule-item-garden">
+                    <span class="icon-garden">✨</span>
+                    <div class="time-garden">18:00</div>
+                </div>
+                <div class="schedule-item-garden">
+                    <span class="icon-garden">🌙</span>
+                    <div class="time-garden">∞</div>
+                </div>
+            </div>
+        </section>
+
+        <div style="text-align: center; margin-top: -10px; margin-bottom: 30px;">
+            <p style="font-size: 0.75rem; color: #a08070; letter-spacing: 1.5px; font-weight: 300; opacity: 0.7; transition: color 0.8s ease;">
+        ✦ Это сюрприз! Просто наслаждайся ✦
+            </p>
+        </div>
+
+        <div class="wishes-quote fade-up" id="wishes">
+            <p>«Настя, пусть этот вечер будет полон<br>
+            энергии, веселья и новых впечатлений!<br>
+            Ты заслуживаешь самого яркого праздника!»</p>
+            <div class="signature-garden">Твои подруги</div>
+        </div>
+
+        <section class="dresscode-garden fade-up" id="dresscode">
+            <h2>Дресс-код</h2>
+            <div class="dresscode-cards">
+                <div class="dresscode-card">
+                    <h4>👰 Для невесты</h4>
+                    <p>Белое<br></p>
+                </div>
+                <div class="dresscode-card">
+                    <h4>👩  Для подруг</h4>
+                    <p>Черный<br>или с черными элементами</p>
+                </div>
+            </div>
+            <div style="font-size:2rem; letter-spacing:10px; margin-top:8px; display:flex; justify-content:center; gap:15px; align-items:center;" id="dresscodeEmoji">
+                <span style="display:inline-flex; align-items:center;">☀️</span>
+                <span style="display:inline-flex; align-items:center;">🥂 </span>
+                <span style="display:inline-flex; align-items:center;">🎉</span>
+                <span style="display:inline-flex; align-items:center;">🌙</span>
+            </div>
+        </section>
+
+        <div class="calendar-garden fade-up">
+            <h2>День X</h2>
+            <div class="cal-grid-garden">
+                <div class="cal-cell-garden head">Пн</div>
+                <div class="cal-cell-garden head">Вт</div>
+                <div class="cal-cell-garden head">Ср</div>
+                <div class="cal-cell-garden head">Чт</div>
+                <div class="cal-cell-garden head">Пт</div>
+                <div class="cal-cell-garden head">Сб</div>
+                <div class="cal-cell-garden head">Вс</div>
+
+                <div class="cal-cell-garden">1</div>
+                <div class="cal-cell-garden">2</div>
+                <div class="cal-cell-garden">3</div>
+                <div class="cal-cell-garden">4</div>
+                <div class="cal-cell-garden">5</div>
+                <div class="cal-cell-garden">6</div>
+                <div class="cal-cell-garden">7</div>
+
+                <div class="cal-cell-garden">8</div>
+                <div class="cal-cell-garden">9</div>
+                <div class="cal-cell-garden">10</div>
+                <div class="cal-cell-garden">11</div>
+                <div class="cal-cell-garden">12</div>
+                <div class="cal-cell-garden">13</div>
+                <div class="cal-cell-garden">14</div>
+
+                <div class="cal-cell-garden">15</div>
+                <div class="cal-cell-garden">16</div>
+                <div class="cal-cell-garden">17</div>
+                <div class="cal-cell-garden">18</div>
+                <div class="cal-cell-garden">19</div>
+                <div class="cal-cell-garden">20</div>
+                <div class="cal-cell-garden">21</div>
+
+                <div class="cal-cell-garden">22</div>
+                <div class="cal-cell-garden">23</div>
+                <div class="cal-cell-garden">24</div>
+                <div class="cal-cell-garden">25</div>
+                <div class="cal-cell-garden">26</div>
+                <div class="cal-cell-garden highlight">27</div>
+                <div class="cal-cell-garden">28</div>
+
+                <div class="cal-cell-garden">29</div>
+                <div class="cal-cell-garden">30</div>
+                <div class="cal-cell-garden empty"></div>
+                <div class="cal-cell-garden empty"></div>
+                <div class="cal-cell-garden empty"></div>
+                <div class="cal-cell-garden empty"></div>
+                <div class="cal-cell-garden empty"></div>
+            </div>
+            <p style="font-weight:600; margin-top:12px; color:#b85a2a; transition:color 0.8s ease;" id="calendarHint">
+                ☀️ 27 ИЮНЯ 2026 — СУББОТА, НАШ ВЕЧЕР! ☀️
+            </p>
+        </div>
+
+        <footer class="footer-garden">
+            <p>💃 <span class="heart-flower" id="footerIcon">🌞</span> До встречи, Настя! Сияй! <span class="heart-flower">✨</span> 🎤</p>
+        </footer>
+
+    </div>
+
+    <script>
+        let isNightMode = false;
+
+        function switchToNightMode() {
+            if (isNightMode) return;
+            isNightMode = true;
+            document.body.classList.add('night-mode');
+
+            document.getElementById('heroIcon').textContent = '🌙';
+            document.getElementById('footerIcon').textContent = '🌙';
+
+            const hint = document.querySelector('.surprise-section .hint');
+            if (hint) hint.textContent = 'Добро пожаловать в ночь безумия! 🌙';
+
+            document.getElementById('dresscodeEmoji').textContent = '🌙 🥂 🎉 ✨';
+
+            document.getElementById('calendarHint').innerHTML = '🌙 27 ИЮНЯ 2026 — СУББОТА, НАШ ВЕЧЕР! 🌙';
+
+            document.getElementById('checklistHint').textContent = 'Готовься, ночь уже близка!';
+
+            document.getElementById('secretHint').textContent = '🌟 ЛУЧШАЯ 🌟';
+        }
+
+        let isMusicOn = false;
+        let audioTrack = null;
+
+        function initAudio() {
+            audioTrack = new Audio();
+            audioTrack.src = 'your-wedding-song.mp3';
+            audioTrack.loop = true;
+            audioTrack.volume = 0.3;
+            audioTrack.load();
+        }
+
+        function toggleMusic() {
+            if (!audioTrack) {
+                initAudio();
+                setTimeout(() => toggleMusic(), 300);
+                return;
+            }
+            if (isMusicOn) {
+                audioTrack.pause();
+                isMusicOn = false;
+                document.getElementById('musicStatus').className = 'music-status off';
+                document.getElementById('musicStatus').textContent = '🔇 Музыка выключена';
+            } else {
+                audioTrack.play().then(() => {
+                    isMusicOn = true;
+                    document.getElementById('musicStatus').className = 'music-status on';
+                    document.getElementById('musicStatus').textContent = '🎵 Музыка играет! 🌙';
+                }).catch(() => {
+                    document.getElementById('musicStatus').textContent = '❌ Ошибка воспроизведения';
+                });
+            }
+        }
+
+        function checkSecret() {
+            const input = document.getElementById('secretInput');
+            const secret = 'ЛУЧШАЯ';
+            if (input.value.trim().toUpperCase() === secret) {
+                input.style.borderColor = '#66bb66';
+                input.value = '';
+                toggleMusic();
+                setTimeout(() => {
+                    input.style.borderColor = 'rgba(200,150,80,0.3)';
+                }, 2000);
+            } else {
+                input.style.borderColor = '#cc5544';
+                input.value = '';
+                input.placeholder = '❌ Неверный пароль! Попробуй снова...';
+                setTimeout(() => {
+                    input.placeholder = 'Введи пароль...';
+                    input.style.borderColor = 'rgba(200,150,80,0.3)';
+                }, 2000);
+            }
+        }
+        document.getElementById('secretInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') checkSecret();
+        });
+
+        function launchFirework() {
+            const container = document.getElementById('fireworkContainer');
+            const colors = ['#ff4d4d', '#ff1a75', '#ff66b2', '#cc3366', '#ff9966', '#e8a0d4', '#c8a0e8', '#f7dc6f', '#85c1e9',
+                '#58d68d', '#ff6b6b', '#f7dc6f'
+            ];
+            const left = 10 + Math.random() * 75;
+            const top = 10 + Math.random() * 75;
+            const count = 55 + Math.floor(Math.random() * 40);
+            for (let i = 0; i < count; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'firework-particle';
+                const angle = Math.random() * 2 * Math.PI;
+                const distance = 70 + Math.random() * 220;
+                const tx = Math.cos(angle) * distance;
+                const ty = Math.sin(angle) * distance - 40;
+                particle.style.setProperty('--tx', tx + 'px');
+                particle.style.setProperty('--ty', ty + 'px');
+                particle.style.left = left + '%';
+                particle.style.top = top + '%';
+                particle.style.background = colors[Math.floor(Math.random() * colors.length)];
+                const size = 5 + Math.random() * 12;
+                particle.style.width = size + 'px';
+                particle.style.height = size + 'px';
+                particle.style.animationDuration = (1.0 + Math.random() * 1.4) + 's';
+                particle.style.borderRadius = Math.random() > 0.5 ? '50%' : '2px';
+                particle.style.boxShadow = '0 0 14px rgba(255,255,220,0.6)';
+                container.appendChild(particle);
+                setTimeout(() => particle.remove(), 2800);
+            }
+        }
+
+        function launchMultipleFireworks(count = 5) {
+            for (let i = 0; i < count; i++) {
+                setTimeout(() => launchFirework(), i * 280 + Math.random() * 200);
+            }
+        }
+
+        let surpriseActivated = false;
+
+        function showSurprise() {
+            if (surpriseActivated) return;
+            surpriseActivated = true;
+            switchToNightMode();
+            try {
+                const audioCtx = new(window.AudioContext || window.webkitAudioContext)();
+                const osc1 = audioCtx.createOscillator();
+                const gain1 = audioCtx.createGain();
+                osc1.connect(gain1);
+                gain1.connect(audioCtx.destination);
+                osc1.frequency.value = 1800;
+                osc1.type = 'sine';
+                gain1.gain.value = 0.15;
+                osc1.start();
+
+                const osc2 = audioCtx.createOscillator();
+                const gain2 = audioCtx.createGain();
+                osc2.connect(gain2);
+                gain2.connect(audioCtx.destination);
+                osc2.frequency.value = 1400;
+                osc2.type = 'sine';
+                gain2.gain.value = 0.12;
+                osc2.start();
+
+                const osc3 = audioCtx.createOscillator();
+                const gain3 = audioCtx.createGain();
+                osc3.connect(gain3);
+                gain3.connect(audioCtx.destination);
+                osc3.frequency.value = 1100;
+                osc3.type = 'triangle';
+                gain3.gain.value = 0.08;
+                osc3.start();
+
+                setTimeout(() => {
+                    gain1.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.8);
+                    gain2.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.9);
+                    gain3.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 1.0);
+                }, 300);
+                setTimeout(() => {
+                    osc1.stop();
+                    osc2.stop();
+                    osc3.stop();
+                }, 1500);
+            } catch (e) {}
+            launchMultipleFireworks(8);
+            const btn = document.getElementById('surpriseBtn');
+            btn.textContent = '🚀 Погнали!';
+            btn.style.transform = 'scale(1.08) rotate(-2deg)';
+            setTimeout(() => {
+                btn.textContent = '🌙 Погнали!';
+                btn.style.transform = 'scale(1) rotate(0deg)';
+            }, 3000);
+        }
+
+        function toggleCheck(el) {
+            el.classList.toggle('checked');
+        }
+
+        const fadeElements = document.querySelectorAll('.fade-up');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.1 });
+        fadeElements.forEach(el => observer.observe(el));
+
+        document.querySelectorAll('.flower-card').forEach(card => {
+            const secret = card.dataset.secret;
+            const textDiv = card.querySelector('.card-secret');
+            card.addEventListener('click', () => {
+                textDiv.innerHTML = `✨ ${secret}`;
+                textDiv.style.fontWeight = '500';
+                textDiv.style.color = '#b85a2a';
+                if (document.body.classList.contains('night-mode')) {
+                    textDiv.style.color = '#e8a0d4';
+                }
+                setTimeout(() => {
+                    textDiv.innerHTML = 'Нажми, чтобы узнать секрет';
+                    textDiv.style.fontWeight = '400';
+                    textDiv.style.color = '#8a6b5a';
+                    if (document.body.classList.contains('night-mode')) {
+                        textDiv.style.color = '#a88898';
+                    }
+                }, 5000);
+                launchFirework();
+            });
+        });
+
+        const memoryData = [{
+            id: 1,
+            image: 'memory1.jpg',
+            caption: '📸 Спасибо за все проведённые вместе моменты! Ты и Малахов — топ! И было очень вкусно!'
+        }, {
+            id: 2,
+            image: 'memory2.jpg',
+            caption: '📸 Ты - один из лучших подарков, которые мне сделал университет❤️'
+        }, {
+            id: 3,
+            image: 'memory3.jpg',
+            caption: '📸 Настёна - (только мне можно тебя так называть!),ты моя Душа!'
+        }];
+
+        function openMemory(id) {
+            const data = memoryData.find(m => m.id === id);
+            if (!data) return;
+            const modal = document.getElementById('memoryModal');
+            const img = document.getElementById('memoryImage');
+            const caption = document.getElementById('memoryCaption');
+            img.src = data.image;
+            img.alt = data.caption;
+            caption.textContent = data.caption;
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            launchMultipleFireworks(3);
+        }
+
+        function closeMemory() {
+            const modal = document.getElementById('memoryModal');
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeMemory();
+        });
+
+        function updateCountdown() {
+            const target = new Date('2026-06-27T00:00:00').getTime();
+            const now = Date.now();
+            const diff = target - now;
+            if (diff > 0) {
+                document.getElementById('daysLeft').textContent = Math.floor(diff / (1000 * 60 * 60 * 24));
+            } else {
+                document.getElementById('daysLeft').textContent = 'сегодня! 🎉';
+            }
+        }
+        updateCountdown();
+        setInterval(updateCountdown, 86400000);
+
+        initAudio();
+    </script>
+</body>
+</html>
