@@ -102,6 +102,80 @@
             color: #e8d5c4;
         }
 
+        /* ===== ЗВЕЗДЫ И СВЕЧЕНИЕ - ИСПРАВЛЕНО! ===== */
+        .star-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0;
+            transition: opacity 1.8s ease;
+            background-image: 
+                radial-gradient(2px 2px at 10% 5%, #fff, transparent),
+                radial-gradient(2px 2px at 20% 15%, #fff, transparent),
+                radial-gradient(2px 2px at 30% 8%, #fff, transparent),
+                radial-gradient(2px 2px at 40% 25%, #fff, transparent),
+                radial-gradient(2px 2px at 50% 10%, #fff, transparent),
+                radial-gradient(2px 2px at 60% 30%, #fff, transparent),
+                radial-gradient(2px 2px at 70% 12%, #fff, transparent),
+                radial-gradient(2px 2px at 80% 20%, #fff, transparent),
+                radial-gradient(2px 2px at 90% 8%, #fff, transparent),
+                radial-gradient(2px 2px at 15% 40%, #fff, transparent),
+                radial-gradient(2px 2px at 25% 50%, #fff, transparent),
+                radial-gradient(2px 2px at 35% 35%, #fff, transparent),
+                radial-gradient(2px 2px at 45% 55%, #fff, transparent),
+                radial-gradient(2px 2px at 55% 45%, #fff, transparent),
+                radial-gradient(2px 2px at 65% 60%, #fff, transparent),
+                radial-gradient(2px 2px at 75% 40%, #fff, transparent),
+                radial-gradient(2px 2px at 85% 55%, #fff, transparent),
+                radial-gradient(2px 2px at 95% 45%, #fff, transparent),
+                radial-gradient(2px 2px at 5% 70%, #fff, transparent),
+                radial-gradient(2px 2px at 15% 80%, #fff, transparent),
+                radial-gradient(2px 2px at 25% 65%, #fff, transparent),
+                radial-gradient(2px 2px at 35% 85%, #fff, transparent),
+                radial-gradient(2px 2px at 45% 75%, #fff, transparent),
+                radial-gradient(2px 2px at 55% 90%, #fff, transparent),
+                radial-gradient(2px 2px at 65% 70%, #fff, transparent),
+                radial-gradient(2px 2px at 75% 85%, #fff, transparent),
+                radial-gradient(2px 2px at 85% 75%, #fff, transparent),
+                radial-gradient(2px 2px at 95% 80%, #fff, transparent),
+                radial-gradient(2px 2px at 50% 50%, #fff, transparent),
+                radial-gradient(2px 2px at 10% 90%, #fff, transparent),
+                radial-gradient(2px 2px at 90% 90%, #fff, transparent),
+                radial-gradient(1px 1px at 12% 22%, #fff, transparent),
+                radial-gradient(1px 1px at 33% 42%, #fff, transparent),
+                radial-gradient(1px 1px at 67% 17%, #fff, transparent),
+                radial-gradient(1px 1px at 88% 67%, #fff, transparent),
+                radial-gradient(1px 1px at 42% 88%, #fff, transparent),
+                radial-gradient(1px 1px at 77% 77%, #fff, transparent);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+        }
+        
+        body.night-mode .star-bg {
+            opacity: 0.7; /* Увеличил с 0.4 до 0.7 */
+        }
+
+        .glow-line {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0;
+            transition: opacity 2s ease;
+            background: radial-gradient(ellipse at 50% 0%, rgba(180, 80, 200, 0.25) 0%, transparent 70%);
+        }
+        body.night-mode .glow-line {
+            opacity: 1; /* Увеличил с 0.4 до 1 */
+        }
+
+        /* Остальные стили без изменений */
         body.night-mode .nav-garden {
             background: rgba(20, 20, 50, 0.8);
             border-color: rgba(180, 80, 200, 0.25);
@@ -282,51 +356,6 @@
         body.night-mode .footer-garden {
             color: #a88898;
             border-top-color: rgba(180, 80, 200, 0.1);
-        }
-
-        .star-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: -1;
-            opacity: 0;
-            transition: opacity 1.8s ease;
-            background:
-                radial-gradient(2px 2px at 20px 30px, #eee, transparent),
-                radial-gradient(2px 2px at 40px 70px, #fff, transparent),
-                radial-gradient(2px 2px at 50px 160px, #ddd, transparent),
-                radial-gradient(2px 2px at 90px 40px, #fff, transparent),
-                radial-gradient(2px 2px at 130px 80px, #fff, transparent),
-                radial-gradient(2px 2px at 160px 30px, #ddd, transparent),
-                radial-gradient(1px 1px at 300px 200px, #fff, transparent),
-                radial-gradient(1px 1px at 400px 100px, #eee, transparent),
-                radial-gradient(1px 1px at 500px 300px, #fff, transparent),
-                radial-gradient(1px 1px at 600px 150px, #ddd, transparent),
-                radial-gradient(1px 1px at 700px 400px, #fff, transparent),
-                radial-gradient(1px 1px at 800px 250px, #eee, transparent);
-            background-size: 200px 200px;
-        }
-        body.night-mode .star-bg {
-            opacity: 0.4;
-        }
-
-        .glow-line {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: -1;
-            opacity: 0;
-            transition: opacity 2s ease;
-            background: radial-gradient(ellipse at 50% 0%, rgba(180, 80, 200, 0.08) 0%, transparent 70%);
-        }
-        body.night-mode .glow-line {
-            opacity: 1;
         }
 
         .container {
